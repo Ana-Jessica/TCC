@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <title>Cadastre-se</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="ICONS/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="ICONS/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="ICONS/favicon-16x16.png">
+  <link rel="manifest" href="ICONS/site.webmanifest">
+  <link rel="mask-icon" href="ICONS/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="title-text">
+      <div class="title login">
+        Alterar senha
+      </div>
+    </div>
+    <div class="form-container">
+      <div class="form-inner">
+        <form action="saveEdit.php" method="POST" class="signup">
+          <div class="field">
+            <label for="email">Email:</label>
+            <input type="email" placeholder="Email" id="email" name="email" required>
+          </div>
+          <div class="field">
+            <label for="nova_senha">Nova senha:</label>
+            <input type="password" placeholder="Senha" id="nova_senha" name="nova_senha" required>
+          </div>
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" name="update" id="update" value="Alterar">
+          </div>
+        </form>
+      </div>
+    </div>
+</body>
+
+</html>

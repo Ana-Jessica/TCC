@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="ICONS/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="ICONS/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="ICONS/favicon-16x16.png">
+    <link rel="manifest" href="ICONS/site.webmanifest">
+    <link rel="mask-icon" href="ICONS/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>Empresa</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, #4a007a, #4f0e88, #541a95, #5824a4, #5b2eb2, #5f30bc, #6333c5, #6735cf, #6d2fd5, #7426db, #7c1ae1, #8400e6);
+            color: #5F3BC6;
+            font-family: 'Crimson Text', serif;
+            font-family: 'Lobster', cursive;
+            font-family: 'Montserrat', sans-serif;
+            font-family: 'Raleway', sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            text-align: center;
+            letter-spacing: 0.05rem;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: 1px solid black;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 15px;
+            width: 1300px;
+            height: 95vh;
+            text-align: center;
+            flex-wrap: nowrap;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 20% 80%;
+            grid-template-rows: 780px 50px;
+            grid-column-gap: 5px;
+            grid-row-gap: 0px;
+        }
+
+        .esquerda {
+            border: 1px solid#5F3BC6;
+            text-align: center;
+            height: 94vh;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
+            border: 1px solig rgba(255, 255, 255, 0.18);
+            background-color: aliceblue;
+        }
+
+        .direita {
+            border: 1px solid #5F3BC6;
+            border-radius: 8px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        button {
+            background-color: transparent;
+            width: 70%;
+            height: 40px;
+            border: none;
+            color: #5F3BC6;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            border: 1px solid #5F3BC6;
+        }
+
+        #terceira {
+            margin: auto;
+            background-color: aliceblue;
+            height: 30vh;
+            width: 98%;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
+            border: 1px solig rgba(255, 255, 255, 0.18);
+        }
+
+        #box {
+            margin: auto;
+            background-color: aliceblue;
+            height: 61vh;
+            margin-top: 3vh;
+            width: 98%;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
+            border: 1px solig rgba(255, 255, 255, 0.18);
+        }
+
+
+        #box img {
+            width: 80%;
+            height: 30vh;
+            border-radius: 10px;
+        }
+
+          /* Hide the radio buttons */
+          .slide-controls input[type="radio"] {
+            display: none;
+          }
+        
+          /* Styling for the labels */
+          .slide-controls label {
+            display: inline-block;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-bottom: 2px solid transparent; /* Add a transparent underline */
+          }
+        
+          /* Styling for the selected label */
+          .slide-controls input[type="radio"]:checked + label {
+            border-color: #007bff; /* Change the border color to indicate selection */
+          }
+        
+          /* Slide Tabs */
+          .slider-tab {
+            height: 2px;
+            width: 50%;
+            background: #007bff;
+            position: relative;
+            top: -2px;
+            transform: translateX(50%);
+          }
+        
+          /* Hide the login and signup forms by default */
+          .info.login,
+          .info.signup {
+            display: none;
+          }
+        
+          /* Show the selected form */
+          .info.show {
+            display: block;
+          }
+        span {
+            margin-left: 5px;
+            color: #5F3BC6;
+        }
+        h1{
+            text-align: center;
+            margin: auto;
+            padding: auto;
+        }
+        p {
+            padding-top: 50px;
+            text-indent: 20px;
+            color: #5F3BC6;
+            text-align: justify;
+            margin: 10px;
+        }
+
+        a:link {
+            color: #5F3BC6;
+            font-family: Candara;
+            text-decoration: none;
+        }
+
+        a:hover {
+            font-weight: bolder;
+            border-radius: 5px;
+        }
+
+        #divBusca {
+            background-color: rgba(255, 255, 255, 0.18);
+            border: solid 2px #5F3BC6;
+            border-radius: 8px;
+            width: 590px;
+            height: 54px;
+            padding-left: 15%;
+            color: #fff;
+        }
+
+        #txtBusca {
+            float: left;
+            background-color: transparent;
+            padding-left: 5px;
+            font-size: 18px;
+            border: none;
+            height: 32px;
+        }
+
+        #btnBusca {
+            border: none;
+            float: right;
+            height: 54px;
+            border-radius: 0 8px 8px 0;
+            width: 75px;
+            font-weight: bold;
+            background: #5F3BC6;
+        }
+
+        #divBusca img {
+            float: left;
+            height: 45px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        #seguidores img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            float: left;
+        }
+
+        #seguidores button {
+            border: 1px solid #5F3BC6;
+            border-radius: 6px;
+            width: 20%;
+            height: 25px;
+            float: right;
+        }
+
+        #seguidores div {
+            font-size: 18px;
+            /* border: 1px solid black; */
+            text-align: center;
+            height: 45px;
+        }
+
+        #logo img {
+            height: 54px;
+            border-radius: 8px;
+        }
+
+        #terceira img {
+            height: 20vh;
+            float: right;
+        }
+
+        h1>.bem-vindo {
+            float: left;
+            padding-left: 10%;
+        }
+
+        .titulo {
+            font-size: 25px;
+            text-align: center;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="grid">
+            <div class="esquerda">
+                <div id="logo">
+                    <img src="imgs/LOGO15.PNG">
+                </div>
+                <hr>
+                <div class="segunda">
+                    <div class="parte1">
+                        <ul>
+                            <div>Ferramentas</div><br>
+                            <li><button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-globe2" viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z" />
+                                    </svg> Visão Geral</button> </li>
+                            <li><a href="criar_vaga.php"><button><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                            height="16" fill="currentColor" class="bi bi-plus-square"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                            <path
+                                                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                        </svg> Criar Vaga</button></li></a>
+                            <li><button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16">
+                                        <path
+                                            d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z" />
+                                    </svg> Ver Devs</button></li>
+                            <li><button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                                        <path
+                                            d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                                    </svg><a href="excluir.php"> Configurações </a></button></li>
+                        </ul>
+                    </div>
+                    <br>
+                    <hr>
+                    <div class="parte2">
+                        <ul>
+                            <div>Contatos</div><br>
+                            <li><button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                                    </svg> InBox</button></li>
+                            <li><button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
+                                    </svg> Notificações</button></li>
+                            <li><button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-chat-dots" viewBox="0 0 16 16">
+                                        <path
+                                            d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                                        <path
+                                            d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z" />
+                                    </svg> Comentários</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="meio">
+
+
+                <div id="terceira">
+                    <h1 class="bem-vindo">Bem Vindo! </h1>
+                    <img src="imgs/job-removebg-preview.png">
+                </div>
+                <div class="quarta">
+                    <div id="box">
+                        <div class="slide-controls">
+                          <input type="radio" name="slide" id="productA" checked>
+                          <input type="radio" name="slide" id="productB">
+                          <label for="productB" class="slide productB">Sobre a Empresa</label>
+                          <label for="productA" class="slide productA">Vagas ofertadas</label>
+                          <div class="slider-tab"></div>
+                        </div>
+                        <div class="info-container">
+                          <div class="info login">
+                            <h1>Lorem Ipsum</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi libero laborum corporis, aspernatur blanditiis dolore alias illum vitae ab! Doloremque nesciunt culpa, tempora ad maxime repellendus magnam eveniet odio. Ratione.</p>
+                          </div>
+                          <div class="info signup">
+                            <h1>Lorem Ipsum1</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi libero laborum corporis, aspernatur blanditiis dolore alias illum vitae ab! Doloremque nesciunt culpa, tempora ad maxime repellendus magnam eveniet odio. Ratione.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <script>
+                        const loginForm = document.querySelector(".login");
+                        const signupForm = document.querySelector(".signup");
+                        const productABtn = document.querySelector(".productA");
+                        const productBBtn = document.querySelector(".productB");
+                        
+                        productBBtn.onclick = () => {
+                          loginForm.classList.add("show");
+                          loginForm.classList.remove("collapse");
+                          signupForm.classList.add("collapse");
+                          signupForm.classList.remove("show");
+                        };
+                        
+                        productABtn.onclick = () => {
+                          loginForm.classList.add("collapse");
+                          loginForm.classList.remove("show");
+                          signupForm.classList.add("show");
+                          signupForm.classList.remove("collapse");
+                        };
+                      </script>
+                  </body>
+
+</html>
